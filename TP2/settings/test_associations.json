@@ -1,0 +1,94 @@
+{
+  "test1_combine_dic1": {
+    "name": "TestExercice1: test1_combine_dic1",
+    "points": 3
+  },
+  "test1_combine_dic2": {
+    "name": "TestExercice1: test1_combine_dic2",
+    "points": 1
+  },
+  "test2_tri_bulle1": {
+    "name": "TestExercice2: test2_tri_bulle1",
+    "points": 2
+  },
+  "test2_tri_bulle2": {
+    "name": "TestExercice2: test2_tri_bulle2",
+    "points": 1
+  },
+  "test2_tri_bulle3": {
+    "name": "TestExercice2: test2_tri_bulle3",
+    "points": 1
+  },
+  "test3_compute_pi1": {
+    "name": "TestExercice3: test3_compute_pi1",
+    "points": 3
+  },
+  "test3_compute_pi2": {
+    "name": "TestExercice3: test3_compute_pi2",
+    "points": 3
+  },
+  "test41_init_maze1": {
+    "name": "TestExercice4: test41_init_maze1",
+    "points": 1
+  },
+  "test41_init_maze2": {
+    "name": "TestExercice4: test41_init_maze2",
+    "points": 1
+  },
+  "test42_validate_move1": {
+    "name": "TestExercice4: test42_validate_move1",
+    "points": 1
+  },
+  "test42_validate_move2": {
+    "name": "TestExercice4: test42_validate_move2",
+    "points": 1
+  },
+  "test42_validate_move3": {
+    "name": "TestExercice4: test42_validate_move3",
+    "points": 1
+  },
+  "test42_validate_move4": {
+    "name": "TestExercice4: test42_validate_move4",
+    "points": 1
+  },
+  "test42_validate_move5": {
+    "name": "TestExercice4: test42_validate_move5",
+    "points": 1
+  },
+  "test42_validate_move6": {
+    "name": "TestExercice4: test42_validate_move6",
+    "points": 1
+  },
+  "test43_move1": {
+    "name": "TestExercice4: test43_move1",
+    "points": 1
+  },
+  "test43_move2": {
+    "name": "TestExercice4: test43_move2",
+    "points": 1
+  },
+  "test43_move3": {
+    "name": "TestExercice4: test43_move3",
+    "points": 1
+  },
+  "test43_move4": {
+    "name": "TestExercice4: test43_move4",
+    "points": 1
+  },
+  "test43_move5": {
+    "name": "TestExercice4: test43_move5",
+    "points": 1
+  },
+  "test43_move6": {
+    "name": "TestExercice4: test43_move6",
+    "points": 1
+  },
+  "test43_move7": {
+    "name": "TestExercice4: test43_move7",
+    "points": 1
+  },
+  "test43_move8": {
+    "name": "TestExercice4: test43_move8",
+    "points": 1
+  }
+}

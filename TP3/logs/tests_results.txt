@@ -1,0 +1,16 @@
+testDijkstra (__main__.TestAlgo) ... ok
+testIndiceMinimum (__main__.TestAlgo) ... ok
+testNoeudMinimalNonVisitesDeNoeudA (__main__.TestAlgo) ... ok
+testNoeudMinimalNonVisitesDeNoeudB (__main__.TestAlgo) ... ok
+testNoeudsVoisinsA (__main__.TestAlgo) ... ok
+testNoeudsVoisinsB (__main__.TestAlgo) ... ok
+testnoeudMinimalNonVisites (__main__.TestAlgo) ... ok
+testAfficheChemin (__main__.TestInterface) ... ok
+testGenereMatriceAleatoireA (__main__.TestInterface) ... ok
+testGenereMatriceAleatoireB (__main__.TestInterface) ... ok
+testSaisirMatrice (__main__.TestInterface) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.002s
+
+OK
