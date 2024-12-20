@@ -1,0 +1,269 @@
+test_comparer_fusee (__main__.TestAssemblage) ... ERROR
+test_corps_celestes_accessibles (__main__.TestAssemblage) ... FAIL
+test_creer_capsules (__main__.TestAssemblage) ... ok
+test_creer_moteurs (__main__.TestAssemblage) ... ERROR
+test_creer_reservoirs (__main__.TestAssemblage) ... ERROR
+test_charger_capsules_df (__main__.TestFichiersPieces) ... ERROR
+test_charger_moteurs_df_1 (__main__.TestFichiersPieces) ... ERROR
+test_charger_moteurs_df_2 (__main__.TestFichiersPieces) ... ERROR
+test_charger_reservoirs_df (__main__.TestFichiersPieces) ... FAIL
+test_filtrer_moteurs (__main__.TestFichiersPieces) ... ERROR
+test_filtrer_moteurs_vide (__main__.TestFichiersPieces) ... ERROR
+test_fusee_deltaV (__main__.TestFusee) ... FAIL
+test_fusee_hauteur (__main__.TestFusee) ... FAIL
+test_fusee_masse (__main__.TestFusee) ... FAIL
+test_fusee_prix (__main__.TestFusee) ... ok
+test_fusee_str (__main__.TestFusee) ... FAIL
+test_reservoir_masse_rempli (__main__.TestFusee) ... ok
+test_fusee_constructeur_existe (__main__.TestFuseeConstructeur) ... ok
+test_main (__main__.TestMain) ... ERROR
+
+======================================================================
+ERROR: test_comparer_fusee (__main__.TestAssemblage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 232, in test_comparer_fusee
+    comparer_fusee(fusee_1, fusee_2)
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/assemblage.py", line 57, in comparer_fusee
+    ("DeltaV par rapport à la masse", fusee_1.delta_v / fusee_1.masse, fusee_2.delta_v / fusee_2.masse),
+AttributeError: 'Fusee' object has no attribute 'delta_v'
+
+======================================================================
+ERROR: test_creer_moteurs (__main__.TestAssemblage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3629, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 136, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 163, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'Isp'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 180, in test_creer_moteurs
+    moteurs = creer_moteurs(test_df)
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/assemblage.py", line 26, in creer_moteurs
+    moteur = Moteur(row["nom"], row["hauteur"], row["masse"], row["prix"], row["Isp"])
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/series.py", line 958, in __getitem__
+    return self._get_value(key)
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/series.py", line 1069, in _get_value
+    loc = self.index.get_loc(label)
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3631, in get_loc
+    raise KeyError(key) from err
+KeyError: 'Isp'
+
+======================================================================
+ERROR: test_creer_reservoirs (__main__.TestAssemblage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3629, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 136, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 163, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'capacité'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 197, in test_creer_reservoirs
+    reservoirs = creer_reservoirs(test_df)
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/assemblage.py", line 35, in creer_reservoirs
+    reservoir = Reservoir(row["nom"], row["hauteur"], row["masse"], row["prix"], row["capacité"])
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/series.py", line 958, in __getitem__
+    return self._get_value(key)
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/series.py", line 1069, in _get_value
+    loc = self.index.get_loc(label)
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3631, in get_loc
+    raise KeyError(key) from err
+KeyError: 'capacité'
+
+======================================================================
+ERROR: test_charger_capsules_df (__main__.TestFichiersPieces)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 42, in test_charger_capsules_df
+    df = charger_capsules_df(tmp_dir)
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/fichiers_pieces.py", line 10, in charger_capsules_df
+    charger_capsules_df = pd.read_csv(f"{chemin_capsules} / {FICHIER_CAPSULE}")
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 678, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 575, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 932, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/io/parsers/readers.py", line 1216, in _make_engine
+    self.handles = get_handle(  # type: ignore[call-overload]
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/io/common.py", line 786, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '/var/folders/w_/0c1_hyms7jzc4760jxqrld6m0000gn/T/tmpkq3lnrxg / capsules.csv'
+
+======================================================================
+ERROR: test_charger_moteurs_df_1 (__main__.TestFichiersPieces)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 66, in test_charger_moteurs_df_1
+    df = charger_moteurs_df(tmp_dir)
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/fichiers_pieces.py", line 37, in charger_moteurs_df
+    moteurs_df = pd.DataFrame(collumns = new_collumns)
+TypeError: __init__() got an unexpected keyword argument 'collumns'
+
+======================================================================
+ERROR: test_charger_moteurs_df_2 (__main__.TestFichiersPieces)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 83, in test_charger_moteurs_df_2
+    df = charger_moteurs_df(tmp_dir)
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/fichiers_pieces.py", line 37, in charger_moteurs_df
+    moteurs_df = pd.DataFrame(collumns = new_collumns)
+TypeError: __init__() got an unexpected keyword argument 'collumns'
+
+======================================================================
+ERROR: test_filtrer_moteurs (__main__.TestFichiersPieces)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3629, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 136, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 163, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'impulsion_specifique'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 91, in test_filtrer_moteurs
+    assert_frame_equal(filtrer_moteurs(test_df, 1), expected_df,
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/fichiers_pieces.py", line 64, in filtrer_moteurs
+    df = moteurs_df[moteurs_df['impulsion_specifique'] > impulsion_minimum]
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/frame.py", line 3505, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3631, in get_loc
+    raise KeyError(key) from err
+KeyError: 'impulsion_specifique'
+
+======================================================================
+ERROR: test_filtrer_moteurs_vide (__main__.TestFichiersPieces)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3629, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 136, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 163, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'impulsion_specifique'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 100, in test_filtrer_moteurs_vide
+    assert_frame_equal(filtrer_moteurs(test_df, sys.maxsize), expected_df, "Le dataframe filtré devrait être vide")
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/fichiers_pieces.py", line 64, in filtrer_moteurs
+    df = moteurs_df[moteurs_df['impulsion_specifique'] > impulsion_minimum]
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/frame.py", line 3505, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3631, in get_loc
+    raise KeyError(key) from err
+KeyError: 'impulsion_specifique'
+
+======================================================================
+ERROR: test_main (__main__.TestMain)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3629, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "pandas/_libs/index.pyx", line 136, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 163, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5198, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 5206, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'impulsion_specifique'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/unittest/mock.py", line 1336, in patched
+    return func(*newargs, **newkeywargs)
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 247, in test_main
+    fusees = main()
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/main.py", line 19, in main
+    moteurs_df = filtrer_moteurs(moteurs_df, IMPULSION_SPECIFIQUE_MINIMALE)
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/fichiers_pieces.py", line 64, in filtrer_moteurs
+    df = moteurs_df[moteurs_df['impulsion_specifique'] > impulsion_minimum]
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/frame.py", line 3505, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/core/indexes/base.py", line 3631, in get_loc
+    raise KeyError(key) from err
+KeyError: 'impulsion_specifique'
+
+======================================================================
+FAIL: test_corps_celestes_accessibles (__main__.TestAssemblage)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 219, in test_corps_celestes_accessibles
+    self.assertEqual(corps_accessibles, corps_attendus)
+AssertionError: Lists differ: [] != ['Vénus', 'Mars']
+
+Second list contains 2 additional elements.
+First extra element 0:
+'Vénus'
+
+- []
++ ['Vénus', 'Mars']
+
+======================================================================
+FAIL: test_charger_reservoirs_df (__main__.TestFichiersPieces)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 52, in test_charger_reservoirs_df
+    assert_frame_equal(df, pd.DataFrame(TEST_RESERVOIRS))
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/_testing/asserters.py", line 1264, in assert_frame_equal
+    _check_isinstance(left, right, DataFrame)
+  File "/Users/anismenouar20/opt/anaconda3/lib/python3.9/site-packages/pandas/_testing/asserters.py", line 237, in _check_isinstance
+    raise AssertionError(
+AssertionError: DataFrame Expected type <class 'pandas.core.frame.DataFrame'>, found <class 'NoneType'> instead
+
+======================================================================
+FAIL: test_fusee_deltaV (__main__.TestFusee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 155, in test_fusee_deltaV
+    self.assertAlmostEqual(self.fusee.calculer_deltav(), 69.71603173654347,
+AssertionError: 2535.5011337892124 != 69.71603173654347 within 7 places (2465.785102052669 difference) : Le deltaV de la fusée n'est pas celui attendu.
+
+======================================================================
+FAIL: test_fusee_hauteur (__main__.TestFusee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 147, in test_fusee_hauteur
+    self.assertAlmostEqual(self.fusee.hauteur, 5.4,
+AssertionError: 1.4 != 5.4 within 7 places (4.0 difference) : La hauteur totale de la fusée n'est pas celle attendue.
+
+======================================================================
+FAIL: test_fusee_masse (__main__.TestFusee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 143, in test_fusee_masse
+    self.assertAlmostEqual(self.fusee.masse, 2850.5,
+AssertionError: 2750.5 != 2850.5 within 7 places (100.0 difference) : La masse totale de la fusée remplie de carburant n'est pas celle attendue.
+
+======================================================================
+FAIL: test_fusee_str (__main__.TestFusee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-3-anismenouar20/test_assignment.py", line 140, in test_fusee_str
+    self.assertEqual(str(self.fusee), expected, "La représentation en str de Fusee n'est pas comme attendue.")
+AssertionError: 'Fusée Romano Fafard\nCapsule:\nCapsule: Exigüe[260 chars]9s\n' != 'Fusée:\n\tNom: Romano Fafard\n\tHauteur totale[335 chars]199s'
+Diff is 843 characters long. Set self.maxDiff to None to see it. : La représentation en str de Fusee n'est pas comme attendue.
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.062s
+
+FAILED (failures=6, errors=9)

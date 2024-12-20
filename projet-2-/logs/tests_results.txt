@@ -1,0 +1,146 @@
+test11_creerMolecule (__main__.TestMolecule) ... ok
+test12_moleculeSeTouche1 (__main__.TestMolecule) ... ERROR
+test12_moleculeSeTouche2 (__main__.TestMolecule) ... ERROR
+test12_moleculeSeTouche3 (__main__.TestMolecule) ... ERROR
+test12_moleculeSeTouche4 (__main__.TestMolecule) ... ERROR
+test12_moleculeSeTouche5 (__main__.TestMolecule) ... ERROR
+test13_deplacerMolecule (__main__.TestMolecule) ... FAIL
+test15_creerListMolecules (__main__.TestMolecule) ... FAIL
+test16_inverseDirMolecule1 (__main__.TestMolecule) ... ok
+test16_inverseDirMolecule2 (__main__.TestMolecule) ... ok
+test16_inverseDirMolecule3 (__main__.TestMolecule) ... ok
+test16_inverseDirMolecule4 (__main__.TestMolecule) ... ok
+test16_inverseDirMolecule5 (__main__.TestMolecule) ... ok
+test16_inverseDirMolecule6 (__main__.TestMolecule) ... ok
+test21_creerReservoir (__main__.TestReservoir) ... ERROR
+test22_colision (__main__.TestReservoir) ... ERROR
+test23_inverseDirMolecules (__main__.TestReservoir) ... ERROR
+test24_getTemperature (__main__.TestReservoir) ... ERROR
+test26_deplacerMolecules (__main__.TestReservoir) ... ERROR
+
+======================================================================
+ERROR: test12_moleculeSeTouche1 (__main__.TestMolecule)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/test_assignment.py", line 25, in test12_moleculeSeTouche1
+    result = molec.moleculesSeTouche(self.mol_1, mol_2)
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/Molecule.py", line 28, in moleculesSeTouche
+    somme_rayon = mol_1["r"]+mol_2["r"]
+KeyError: 'r'
+
+======================================================================
+ERROR: test12_moleculeSeTouche2 (__main__.TestMolecule)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/test_assignment.py", line 30, in test12_moleculeSeTouche2
+    result = molec.moleculesSeTouche(self.mol_1, mol_2)
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/Molecule.py", line 28, in moleculesSeTouche
+    somme_rayon = mol_1["r"]+mol_2["r"]
+KeyError: 'r'
+
+======================================================================
+ERROR: test12_moleculeSeTouche3 (__main__.TestMolecule)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/test_assignment.py", line 35, in test12_moleculeSeTouche3
+    result = molec.moleculesSeTouche(self.mol_1, mol_2)
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/Molecule.py", line 28, in moleculesSeTouche
+    somme_rayon = mol_1["r"]+mol_2["r"]
+KeyError: 'r'
+
+======================================================================
+ERROR: test12_moleculeSeTouche4 (__main__.TestMolecule)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/test_assignment.py", line 40, in test12_moleculeSeTouche4
+    result = molec.moleculesSeTouche(self.mol_1, mol_2)
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/Molecule.py", line 28, in moleculesSeTouche
+    somme_rayon = mol_1["r"]+mol_2["r"]
+KeyError: 'r'
+
+======================================================================
+ERROR: test12_moleculeSeTouche5 (__main__.TestMolecule)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/test_assignment.py", line 45, in test12_moleculeSeTouche5
+    result = molec.moleculesSeTouche(self.mol_1, mol_2)
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/Molecule.py", line 28, in moleculesSeTouche
+    somme_rayon = mol_1["r"]+mol_2["r"]
+KeyError: 'r'
+
+======================================================================
+ERROR: test21_creerReservoir (__main__.TestReservoir)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/test_assignment.py", line 109, in test21_creerReservoir
+    self.assertEqual(reservoir['h'], hauteur)
+KeyError: 'h'
+
+======================================================================
+ERROR: test22_colision (__main__.TestReservoir)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/test_assignment.py", line 120, in test22_colision
+    reservoir = res.colision(reservoir)
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/Reservoir.py", line 39, in colision
+    for i in range(len(reservoir['GAUCHE']['molécules'])):
+KeyError: 'GAUCHE'
+
+======================================================================
+ERROR: test23_inverseDirMolecules (__main__.TestReservoir)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/test_assignment.py", line 126, in test23_inverseDirMolecules
+    reservoir =  res.inverseDirMolecules(reservoir)
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/Reservoir.py", line 68, in inverseDirMolecules
+    for mol in reservoir['gauche']:
+KeyError: 'gauche'
+
+======================================================================
+ERROR: test24_getTemperature (__main__.TestReservoir)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/test_assignment.py", line 133, in test24_getTemperature
+    temperature_g = res.getTemperature(reservoir, "Gauche")
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/Reservoir.py", line 79, in getTemperature
+    N = len(reservoir[cote]['molécules'])
+KeyError: 'Gauche'
+
+======================================================================
+ERROR: test26_deplacerMolecules (__main__.TestReservoir)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/test_assignment.py", line 142, in test26_deplacerMolecules
+    reservoir = res.deplacerMolecules(reservoir, plt.figure().add_subplot())
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/Reservoir.py", line 116, in deplacerMolecules
+    inverseDirMolecules(reservoir)
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/Reservoir.py", line 68, in inverseDirMolecules
+    for mol in reservoir['gauche']:
+KeyError: 'gauche'
+
+======================================================================
+FAIL: test13_deplacerMolecule (__main__.TestMolecule)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/test_assignment.py", line 53, in test13_deplacerMolecule
+    self.assertDictEqual(mol_1, mol_2)
+AssertionError: {'x': 5, 'y': 2, 'dx': -3, 'dy': 4, 'rayon': 5} != {'x': 2, 'y': 6, 'dx': -3, 'dy': 4, 'rayon': 5}
+- {'dx': -3, 'dy': 4, 'rayon': 5, 'x': 5, 'y': 2}
+?                                      ^       ^
+
++ {'dx': -3, 'dy': 4, 'rayon': 5, 'x': 2, 'y': 6}
+?                                      ^       ^
+
+
+======================================================================
+FAIL: test15_creerListMolecules (__main__.TestMolecule)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/anismenouar20/Documents/GitHub/projet-2-anismenouar20/test_assignment.py", line 59, in test15_creerListMolecules
+    self.assertEqual(len(lm), nbMolecules)
+AssertionError: 0 != 20
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.200s
+
+FAILED (failures=2, errors=10)
